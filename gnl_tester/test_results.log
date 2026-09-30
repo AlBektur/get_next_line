@@ -1,11 +1,7 @@
-=== TEST SESSION STARTED: Wed Sep 30 02:42:36 PM CEST 2026 ===
+=== TEST SESSION STARTED: Thu Oct  1 01:11:22 CEST 2026 ===
 Detailed logs below.
 -----------------------------------
---- NORMINETTE ERRORS ---
-get_next_line.h: Error!
-get_next_line_utils.c: Error!
-get_next_line.c: Error!
--------------------------
+[NORM OK]
 
 
 >>> STARTING MANDATORY PART <<<
@@ -23,11 +19,11 @@ Test: long_line.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines_in_sententeces.txt
+Test: newlines.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines.txt
+Test: newlines_in_sententeces.txt
 [OK]
 Valgrind: OK
 ----------------
@@ -60,11 +56,11 @@ Test: long_line.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines_in_sententeces.txt
+Test: newlines.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines.txt
+Test: newlines_in_sententeces.txt
 [OK]
 Valgrind: OK
 ----------------
@@ -86,7 +82,7 @@ Valgrind: OK
 ----------------
 --- BUFFER_SIZE = 42 ---
 Test: STDIN (Pipe)
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: empty.txt
@@ -94,36 +90,36 @@ Test: empty.txt
 Valgrind: OK
 ----------------
 Test: long_line.txt
-[KO]
-Valgrind: OK
-----------------
-Test: newlines_in_sententeces.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: newlines.txt
-[KO]
+[OK]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[OK]
 Valgrind: OK
 ----------------
 Test: no_newline_at_end.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: normal.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: panna.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: variable_length.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 --- BUFFER_SIZE = 1000 ---
 Test: STDIN (Pipe)
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: empty.txt
@@ -131,15 +127,15 @@ Test: empty.txt
 Valgrind: OK
 ----------------
 Test: long_line.txt
-[KO]
-Valgrind: OK
-----------------
-Test: newlines_in_sententeces.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: newlines.txt
-[KO]
+[OK]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[OK]
 Valgrind: OK
 ----------------
 Test: no_newline_at_end.txt
@@ -147,20 +143,20 @@ Test: no_newline_at_end.txt
 Valgrind: OK
 ----------------
 Test: normal.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: panna.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: variable_length.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 --- BUFFER_SIZE = 1000000 ---
 Test: STDIN (Pipe)
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: empty.txt
@@ -168,15 +164,15 @@ Test: empty.txt
 Valgrind: OK
 ----------------
 Test: long_line.txt
-[KO]
-Valgrind: OK
-----------------
-Test: newlines_in_sententeces.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: newlines.txt
-[KO]
+[OK]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[OK]
 Valgrind: OK
 ----------------
 Test: no_newline_at_end.txt
@@ -184,15 +180,15 @@ Test: no_newline_at_end.txt
 Valgrind: OK
 ----------------
 Test: normal.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: panna.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 Test: variable_length.txt
-[KO]
+[OK]
 Valgrind: OK
 ----------------
 

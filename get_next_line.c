@@ -67,7 +67,14 @@ char	*read_line(int fd)
 	buffer = malloc((sizeof(char) * BUFFER_SIZE) + 1);
 	while (true)
 	{
+		if (static_buffer && has_newline(static_buffer) != -1)
+		{
+			line = get_line("", &static_buffer);
+			free(static_buffer);
+			break ;
+		}
 		bytes = read(fd, buffer, BUFFER_SIZE);
+
 		if (bytes == 0)
 		{
 			if (static_buffer)
@@ -86,9 +93,11 @@ char	*read_line(int fd)
 				return (line);
 			}
 		}
-		if (bytes == 0)
+		else
+		{
 			buffer[bytes] = '\0';
-		line = get_line(buffer, &static_buffer);
+			line = get_line(buffer, &static_buffer);
+		}
 		if (line)
 			break ;
 	}
