@@ -1,0 +1,211 @@
+=== TEST SESSION STARTED: Wed Sep 30 02:42:36 PM CEST 2026 ===
+Detailed logs below.
+-----------------------------------
+--- NORMINETTE ERRORS ---
+get_next_line.h: Error!
+get_next_line_utils.c: Error!
+get_next_line.c: Error!
+-------------------------
+
+
+>>> STARTING MANDATORY PART <<<
+
+--- BUFFER_SIZE = DEFAULT ---
+Test: STDIN (Pipe)
+[OK]
+Valgrind: OK
+----------------
+Test: empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: long_line.txt
+[OK]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[OK]
+Valgrind: OK
+----------------
+Test: newlines.txt
+[OK]
+Valgrind: OK
+----------------
+Test: no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: normal.txt
+[OK]
+Valgrind: OK
+----------------
+Test: panna.txt
+[OK]
+Valgrind: OK
+----------------
+Test: variable_length.txt
+[OK]
+Valgrind: OK
+----------------
+--- BUFFER_SIZE = 1 ---
+Test: STDIN (Pipe)
+[OK]
+Valgrind: OK
+----------------
+Test: empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: long_line.txt
+[OK]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[OK]
+Valgrind: OK
+----------------
+Test: newlines.txt
+[OK]
+Valgrind: OK
+----------------
+Test: no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: normal.txt
+[OK]
+Valgrind: OK
+----------------
+Test: panna.txt
+[OK]
+Valgrind: OK
+----------------
+Test: variable_length.txt
+[OK]
+Valgrind: OK
+----------------
+--- BUFFER_SIZE = 42 ---
+Test: STDIN (Pipe)
+[KO]
+Valgrind: OK
+----------------
+Test: empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: long_line.txt
+[KO]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[KO]
+Valgrind: OK
+----------------
+Test: newlines.txt
+[KO]
+Valgrind: OK
+----------------
+Test: no_newline_at_end.txt
+[KO]
+Valgrind: OK
+----------------
+Test: normal.txt
+[KO]
+Valgrind: OK
+----------------
+Test: panna.txt
+[KO]
+Valgrind: OK
+----------------
+Test: variable_length.txt
+[KO]
+Valgrind: OK
+----------------
+--- BUFFER_SIZE = 1000 ---
+Test: STDIN (Pipe)
+[KO]
+Valgrind: OK
+----------------
+Test: empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: long_line.txt
+[KO]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[KO]
+Valgrind: OK
+----------------
+Test: newlines.txt
+[KO]
+Valgrind: OK
+----------------
+Test: no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: normal.txt
+[KO]
+Valgrind: OK
+----------------
+Test: panna.txt
+[KO]
+Valgrind: OK
+----------------
+Test: variable_length.txt
+[KO]
+Valgrind: OK
+----------------
+--- BUFFER_SIZE = 1000000 ---
+Test: STDIN (Pipe)
+[KO]
+Valgrind: OK
+----------------
+Test: empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: long_line.txt
+[KO]
+Valgrind: OK
+----------------
+Test: newlines_in_sententeces.txt
+[KO]
+Valgrind: OK
+----------------
+Test: newlines.txt
+[KO]
+Valgrind: OK
+----------------
+Test: no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: normal.txt
+[KO]
+Valgrind: OK
+----------------
+Test: panna.txt
+[KO]
+Valgrind: OK
+----------------
+Test: variable_length.txt
+[KO]
+Valgrind: OK
+----------------
+
+
+>>> STARTING BONUS PART <<<
+
+--- BUFFER_SIZE = DEFAULT ---
+Compilation Error for BUFFER_SIZE=DEFAULT
+--- BUFFER_SIZE = 1 ---
+Compilation Error for BUFFER_SIZE=1
+--- BUFFER_SIZE = 42 ---
+Compilation Error for BUFFER_SIZE=42
+--- BUFFER_SIZE = 1000 ---
+Compilation Error for BUFFER_SIZE=1000
+--- BUFFER_SIZE = 1000000 ---
+Compilation Error for BUFFER_SIZE=1000000
