@@ -70,7 +70,6 @@ char	*read_line(int fd)
 		if (static_buffer && has_newline(static_buffer) != -1)
 		{
 			line = get_line("", &static_buffer);
-			free(static_buffer);
 			break ;
 		}
 		bytes = read(fd, buffer, BUFFER_SIZE);
@@ -79,7 +78,7 @@ char	*read_line(int fd)
 		if (bytes == 0)
 		{
 
-			if (static_buffer)
+			if (static_buffer && static_buffer[0])
 			{
 				line = ft_strdup(static_buffer);
 				free(static_buffer);
@@ -90,6 +89,7 @@ char	*read_line(int fd)
 
 			else
 			{
+				free(static_buffer);
 				free(buffer);
 				static_buffer = NULL;
 				line = NULL;
