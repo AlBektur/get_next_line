@@ -1,7 +1,11 @@
-=== TEST SESSION STARTED: Thu Oct  1 01:11:22 CEST 2026 ===
+=== TEST SESSION STARTED: Thu Oct  1 03:11:03 PM CEST 2026 ===
 Detailed logs below.
 -----------------------------------
-[NORM OK]
+--- NORMINETTE ERRORS ---
+get_next_line.c: Error!
+get_next_line.h: Error!
+get_next_line_utils.c: Error!
+-------------------------
 
 
 >>> STARTING MANDATORY PART <<<
@@ -19,11 +23,11 @@ Test: long_line.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines.txt
+Test: newlines_in_sententeces.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines_in_sententeces.txt
+Test: newlines.txt
 [OK]
 Valgrind: OK
 ----------------
@@ -56,11 +60,11 @@ Test: long_line.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines.txt
+Test: newlines_in_sententeces.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines_in_sententeces.txt
+Test: newlines.txt
 [OK]
 Valgrind: OK
 ----------------
@@ -93,11 +97,11 @@ Test: long_line.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines.txt
+Test: newlines_in_sententeces.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines_in_sententeces.txt
+Test: newlines.txt
 [OK]
 Valgrind: OK
 ----------------
@@ -130,11 +134,11 @@ Test: long_line.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines.txt
+Test: newlines_in_sententeces.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines_in_sententeces.txt
+Test: newlines.txt
 [OK]
 Valgrind: OK
 ----------------
@@ -167,11 +171,11 @@ Test: long_line.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines.txt
+Test: newlines_in_sententeces.txt
 [OK]
 Valgrind: OK
 ----------------
-Test: newlines_in_sententeces.txt
+Test: newlines.txt
 [OK]
 Valgrind: OK
 ----------------

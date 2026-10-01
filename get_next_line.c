@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 14:20:29 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/30 14:39:34 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/10/01 15:55:19 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,11 @@ char	*read_line(int fd)
 			break ;
 		}
 		bytes = read(fd, buffer, BUFFER_SIZE);
+	
 
 		if (bytes == 0)
 		{
+
 			if (static_buffer)
 			{
 				line = ft_strdup(static_buffer);
@@ -85,6 +87,7 @@ char	*read_line(int fd)
 				free(buffer);
 				return (line);
 			}
+
 			else
 			{
 				free(buffer);
@@ -92,6 +95,7 @@ char	*read_line(int fd)
 				line = NULL;
 				return (line);
 			}
+	
 		}
 		else
 		{
@@ -109,7 +113,7 @@ char	*get_next_line(int fd)
 {
 	char *res;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > 999 || BUFFER_SIZE < 0)
 		return (NULL);
 	res = read_line(fd);
 	return (res);
