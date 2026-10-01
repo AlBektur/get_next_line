@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 14:20:29 by besaipid          #+#    #+#             */
-/*   Updated: 2026/10/01 15:55:19 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/10/01 17:34:56 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*read_line(int fd)
 {
 	char	*buffer;
 	char	*line = NULL;
-	size_t bytes;
+	ssize_t bytes;
 	static char	*static_buffer = NULL;
 
 	buffer = malloc((sizeof(char) * BUFFER_SIZE) + 1);
@@ -73,8 +73,11 @@ char	*read_line(int fd)
 			break ;
 		}
 		bytes = read(fd, buffer, BUFFER_SIZE);
-	
-
+		if (bytes < 0)
+		{
+			line = NULL;
+			break ;
+		}
 		if (bytes == 0)
 		{
 
@@ -113,7 +116,9 @@ char	*get_next_line(int fd)
 {
 	char *res;
 
-	if (fd < 0 || fd > 999 || BUFFER_SIZE < 0)
+	if (fd < 0)
+		return (NULL);
+	if (fd > 999 || BUFFER_SIZE <= 0)
 		return (NULL);
 	res = read_line(fd);
 	return (res);
@@ -124,6 +129,7 @@ int	main(int argc, char *argv[])
 {
 	int fd = open(argv[1], O_RDONLY);
 	char	*res;
+	(void)argc;
 
 	while (1)
 	{
@@ -133,5 +139,10 @@ int	main(int argc, char *argv[])
 		printf("%s", res);
 		free(res);
 	}
+	close(fd);
+
+	res = get_next_line(fd);
+	if (res == NULL)
+		printf("%s\n", "it is NULL");
 	return (0);
 }*/
