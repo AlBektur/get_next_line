@@ -79,19 +79,4 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 \
 
 To use the bonus version, include `get_next_line_bonus.h` and compile `get_next_line_bonus.c` and `get_next_line_utils_bonus.c` instead of the mandatory source files. For standard input, pass file descriptor `0` to `get_next_line`.
 
-## Testing
-
-The repository includes a tester in `gnl_tester/`. From the repository root, run:
-
-```sh
-make -C gnl_tester       # Run the available test suite
-make -C gnl_tester m     # Mandatory tests
-make -C gnl_tester b     # Bonus tests
-```
-
-The tester covers different buffer sizes, empty input, long lines, newline and no-final-newline cases, standard input, and alternating reads from multiple descriptors. On Linux, its memory checks use Valgrind when available.
-
-## Author and AI-use disclosure
-
-- **42 login:** `besaipid`
 - **AI use:** AI was used to understand new concepts, find errors, and understand the project.
