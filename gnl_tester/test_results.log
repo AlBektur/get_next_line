@@ -1,7 +1,10 @@
-=== TEST SESSION STARTED: Fri Oct  2 01:56:58 AM CEST 2026 ===
+=== TEST SESSION STARTED: Fri Oct  2 11:54:39 AM CEST 2026 ===
 Detailed logs below.
 -----------------------------------
-[NORM OK]
+--- NORMINETTE ERRORS ---
+Setting locale to en_US
+get_next_line_bonus.h: Error!
+-------------------------
 
 
 >>> STARTING MANDATORY PART <<<
@@ -196,12 +199,187 @@ Valgrind: OK
 >>> STARTING BONUS PART <<<
 
 --- BUFFER_SIZE = DEFAULT ---
-Compilation Error for BUFFER_SIZE=DEFAULT
+Test: Mix empty.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix long_line.txt + newlines_in_sententeces.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines_in_sententeces.txt + newlines.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines.txt + no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix no_newline_at_end.txt + normal.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix normal.txt + panna.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix panna.txt + variable_length.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix variable_length.txt + empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Twin Mix long_line.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
 --- BUFFER_SIZE = 1 ---
-Compilation Error for BUFFER_SIZE=1
+Test: Mix empty.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix long_line.txt + newlines_in_sententeces.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines_in_sententeces.txt + newlines.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines.txt + no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix no_newline_at_end.txt + normal.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix normal.txt + panna.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix panna.txt + variable_length.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix variable_length.txt + empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Twin Mix long_line.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
 --- BUFFER_SIZE = 42 ---
-Compilation Error for BUFFER_SIZE=42
+Test: Mix empty.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix long_line.txt + newlines_in_sententeces.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines_in_sententeces.txt + newlines.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines.txt + no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix no_newline_at_end.txt + normal.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix normal.txt + panna.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix panna.txt + variable_length.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix variable_length.txt + empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Twin Mix long_line.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
 --- BUFFER_SIZE = 1000 ---
-Compilation Error for BUFFER_SIZE=1000
+Test: Mix empty.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix long_line.txt + newlines_in_sententeces.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines_in_sententeces.txt + newlines.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines.txt + no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix no_newline_at_end.txt + normal.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix normal.txt + panna.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix panna.txt + variable_length.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix variable_length.txt + empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Twin Mix long_line.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
 --- BUFFER_SIZE = 1000000 ---
-Compilation Error for BUFFER_SIZE=1000000
+Test: Mix empty.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix long_line.txt + newlines_in_sententeces.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines_in_sententeces.txt + newlines.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix newlines.txt + no_newline_at_end.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix no_newline_at_end.txt + normal.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix normal.txt + panna.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix panna.txt + variable_length.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Mix variable_length.txt + empty.txt
+[OK]
+Valgrind: OK
+----------------
+Test: Twin Mix long_line.txt + long_line.txt
+[OK]
+Valgrind: OK
+----------------
