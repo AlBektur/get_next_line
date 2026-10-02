@@ -6,13 +6,13 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 14:20:29 by besaipid          #+#    #+#             */
-/*   Updated: 2026/10/01 17:34:56 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/10/02 01:46:17 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		has_newline(char *str)
+int	has_newline(char *str)
 {
 	int	i;
 
@@ -26,18 +26,17 @@ int		has_newline(char *str)
 	return (-1);
 }
 
-
-char *get_line(char *buffer, char **static_buffer)
+char	*get_line(char *buffer, char **static_buffer)
 {
 	char	*temp;
-	char	*line = NULL;
+	char	*line;
 	int		index;
 
+	line = NULL;
 	if (!*static_buffer)
 		temp = ft_strdup(buffer);
 	else
 		temp = ft_strjoin(*static_buffer, buffer);
-
 	index = has_newline(temp);
 	if (index != -1)
 	{
@@ -48,79 +47,72 @@ char *get_line(char *buffer, char **static_buffer)
 		free(temp);
 		return (line);
 	}
-	else
-	{
-		free(*static_buffer);
-		*static_buffer = ft_strdup(temp);
-		free(temp);
-	}
-	return (line);
+	free(*static_buffer);
+	*static_buffer = ft_strdup(temp);
+	return (free(temp), line);
 }
 
-char	*read_line(int fd)
+char	*ft_handler(char **static_buffer, char **line, char **buffer)
 {
-	char	*buffer;
-	char	*line = NULL;
-	ssize_t bytes;
-	static char	*static_buffer = NULL;
+	if (*static_buffer && *static_buffer[0])
+	{
+		*line = ft_strdup(*static_buffer);
+		free(*static_buffer);
+		*static_buffer = NULL;
+		free(*buffer);
+		return (*line);
+	}
+	free(*static_buffer);
+	free(*buffer);
+	*static_buffer = NULL;
+	*line = NULL;
+	return (*line);
+}
 
-	buffer = malloc((sizeof(char) * BUFFER_SIZE) + 1);
-	while (true)
+char	*read_line(int fd, char **buffer, ssize_t bytes)
+{
+	char			*temp;
+	char			*line;
+	static char		*static_buffer = NULL;
+
+	temp = *buffer;
+	line = NULL;
+	while (line == NULL)
 	{
 		if (static_buffer && has_newline(static_buffer) != -1)
 		{
 			line = get_line("", &static_buffer);
 			break ;
 		}
-		bytes = read(fd, buffer, BUFFER_SIZE);
+		bytes = read(fd, temp, BUFFER_SIZE);
 		if (bytes < 0)
 		{
 			line = NULL;
 			break ;
 		}
 		if (bytes == 0)
-		{
-
-			if (static_buffer && static_buffer[0])
-			{
-				line = ft_strdup(static_buffer);
-				free(static_buffer);
-				static_buffer = NULL;
-				free(buffer);
-				return (line);
-			}
-
-			else
-			{
-				free(static_buffer);
-				free(buffer);
-				static_buffer = NULL;
-				line = NULL;
-				return (line);
-			}
-	
-		}
-		else
-		{
-			buffer[bytes] = '\0';
-			line = get_line(buffer, &static_buffer);
-		}
-		if (line)
-			break ;
+			return (ft_handler(&static_buffer, &line, &temp));
+		temp[bytes] = '\0';
+		line = get_line(temp, &static_buffer);
 	}
-	free(buffer);
-	return (line);
+	return (free(temp), line);
 }
 
 char	*get_next_line(int fd)
 {
-	char *res;
+	char	*res;
+	char	*buffer;
+	ssize_t	bytes;
 
+	bytes = 0;
 	if (fd < 0)
 		return (NULL);
 	if (fd > 999 || BUFFER_SIZE <= 0)
 		return (NULL);
-	res = read_line(fd);
+	buffer = malloc((sizeof(char) * BUFFER_SIZE) + 1);
+	if (!buffer)
+		return (NULL);
+	res = read_line(fd, &buffer, bytes);
 	return (res);
 }
 

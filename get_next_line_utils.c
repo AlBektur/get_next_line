@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 23:51:52 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/30 14:37:10 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/10/02 00:18:04 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ char	*ft_strdup(char *s)
 	return (res);
 }
 
-char	*ft_substr(char *str,  int index)
+char	*ft_substr(char *str, int index)
 {
-	int	i;
+	int		i;
 	char	*res;
 
 	res = malloc((sizeof(char) * index) + 1);

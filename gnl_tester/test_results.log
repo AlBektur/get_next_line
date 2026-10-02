@@ -1,11 +1,7 @@
-=== TEST SESSION STARTED: Thu Oct  1 05:38:39 PM CEST 2026 ===
+=== TEST SESSION STARTED: Fri Oct  2 01:56:58 AM CEST 2026 ===
 Detailed logs below.
 -----------------------------------
---- NORMINETTE ERRORS ---
-get_next_line.c: Error!
-get_next_line.h: Error!
-get_next_line_utils.c: Error!
--------------------------
+[NORM OK]
 
 
 >>> STARTING MANDATORY PART <<<
