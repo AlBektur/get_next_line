@@ -1,4 +1,4 @@
-# get_next_line
+*This project has been created as part of the 42 curriculum by besaipid.*
 
 This repository contains **get_next_line**, a 42 school project by **besaipid**. The goal is to read a file descriptor one line at a time, regardless of how many `read()` calls are needed to reach the end of a line.
 
